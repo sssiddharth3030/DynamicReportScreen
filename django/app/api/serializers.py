@@ -1,8 +1,18 @@
 from rest_framework import serializers
-from .models import Item
+from .models import VariantHeader, VariantItem, VariantItemValue
 
 
-class ItemSerializer(serializers.ModelSerializer):
+class VariantHeaderSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Item
+    model = VariantHeader
+    fields = '__all__'
+    
+class VariantItemSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = VariantItem
+    fields = '__all__'
+    
+class VariantItemValue(serializers.ModelSerializer):
+  class Meta:
+    model = VariantItemValue
     fields = '__all__'
