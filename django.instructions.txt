@@ -1,0 +1,22 @@
+# create virtual environment
+python3 -m venv env
+
+# activate virtual environment
+source ./env/bin/activate
+
+# update pip if required
+pip install --upgrade pip
+
+# install django
+python3 -m pip install Django djangorestframework
+
+# create the project
+django-admin startproject variant_data app
+
+# run server
+python3 manage.py runserver
+# // run the migrations if required : 
+# // python3 manage.py makemigrations
+# // python3 manage.py migrate
+
+# // http://127.0.0.1:8000/ _> app should be accessible in local host
